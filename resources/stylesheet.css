@@ -10,7 +10,7 @@ body {
 
 /* bookmark styles */
 ul {
-  padding:30px;
+  padding:15px 0;
 }
 
 ul li {
@@ -43,18 +43,42 @@ a {
 }
 a:hover { text-decoration:underline; }
 
-/* personalized image position */
+/* github fork info */
 #image {
   width:200px;
-  position:fixed;
-  bottom:10px;
-  right:10px;
   opacity:0.75;
+  margin-right:10px;
+  float:right;
+}
+
+#fork-me {
+  background-color:#FFF;
+  border:1px solid #39C;
+  border-radius:30px;
+  display:inline-block;
+  text-align:center;
+  padding:10px;
+  float:right;
+  margin:3px;
+  margin-right:200px;
+  margin-bottom:-15px;
+  position:relative;
+}
+
+#fork-me:after {
+  content:"";
+  border-bottom:20px solid #39C;
+  border-right:10px solid transparent;
+  border-left:10px solid transparent;
+  position:absolute;
+  right:-10px;
+  bottom:-0px;
+  transform:rotate(130deg);
   z-index:-1;
 }
 
-/* github fork info */
-#fork-me {
-  text-align:center;
-  padding:10px;
+.clear:after, .column-row:after {
+  content:"";
+  display:table;
+  clear:both;
 }
